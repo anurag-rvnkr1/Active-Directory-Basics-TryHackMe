@@ -1,18 +1,20 @@
+<p align="center">
+<img src="assets/figure-2.1-windows-domain-environment.png" width="100%">
+</p>
 
-
-# 🛡️ Active Directory Basics — TryHackMe Lab Documentation
+<h1 align="center">🛡️ Active Directory Basics — TryHackMe</h1>
 
 <p align="center">
-
-![TryHackMe](https://img.shields.io/badge/TryHackMe-Active%20Directory%20Basics-red?style=for-the-badge&logo=tryhackme)
-![Windows Server](https://img.shields.io/badge/Windows%20Server-Active%20Directory-0078D6?style=for-the-badge&logo=windows)
-![Blue Team](https://img.shields.io/badge/Category-Blue%20Team-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-
+Windows Active Directory Fundamentals • Identity & Access Management • Kerberos • Group Policy
 </p>
 
 <p align="center">
-<b>Windows Active Directory Fundamentals • Identity & Access Management • Kerberos • Group Policy</b>
+
+![TryHackMe](https://img.shields.io/badge/TryHackMe-Active_Directory_Basics-red?style=for-the-badge&logo=tryhackme)
+![Windows Server](https://img.shields.io/badge/Windows_Server-AD_DS-0078D6?style=for-the-badge&logo=windows)
+![Blue Team](https://img.shields.io/badge/Blue_Team-Windows_Security-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+
 </p>
 
 ---
