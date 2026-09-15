@@ -685,6 +685,7 @@ Active-Directory-Basics-TryHackMe/
 │
 ├── Documentation/
 │   └── Documentation.md
+│   └── Documentation.pdf
 │
 ├── Screenshots/
 │   ├── figure-2.1-windows-domain-environment.png
