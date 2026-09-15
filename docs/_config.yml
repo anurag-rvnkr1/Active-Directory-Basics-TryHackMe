@@ -1,0 +1,18 @@
+title: "Active Directory Basics — TryHackMe"
+description: "Professional Windows Active Directory lab documentation."
+theme: just-the-docs
+
+color_scheme: dark
+
+search_enabled: true
+heading_anchors: true
+
+aux_links:
+  GitHub Repository: "https://github.com/anurag-rvnkr1/Active-Directory-Basics-TryHackMe"
+
+nav_enabled: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: "© 2026 Anurag Ravankar • Cybersecurity Portfolio"
