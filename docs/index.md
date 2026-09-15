@@ -1,7 +1,4 @@
----
-title: Active Directory Basics — TryHackMe
-description: Professional documentation for the TryHackMe Active Directory Basics room.
----
+
 
 # 🛡️ Active Directory Basics — TryHackMe Lab Documentation
 
