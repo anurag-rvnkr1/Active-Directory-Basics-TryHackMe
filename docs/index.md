@@ -1,7 +1,3 @@
-<p align="center">
-<img src="assets/figure-2.1-windows-domain-environment.png" width="100%">
-</p>
-
 <h1 align="center">🛡️ Active Directory Basics — TryHackMe</h1>
 
 <p align="center">
