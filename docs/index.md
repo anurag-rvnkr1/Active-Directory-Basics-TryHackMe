@@ -1962,25 +1962,3 @@ Challenge-specific information intentionally redacted in the source documentatio
 The purpose of this repository is to demonstrate practical understanding of Windows Active Directory administration and security fundamentals while respecting the educational nature of the TryHackMe environment.
 
 ---
-
-# Author
-
-**Anurag Revankar**
-
-Cybersecurity Student • Windows Security • Blue Team Fundamentals • Active Directory Administration
-
----
-
-<div class="ctf-footer">
-
-<strong>CYBERSECURITY CTF PORTFOLIO</strong>
-
-<br>
-
-Research • Practice • Detection • Defense
-
-<br><br>
-
-© Anurag R.
-
-</div>
