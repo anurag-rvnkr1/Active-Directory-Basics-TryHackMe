@@ -1,79 +1,147 @@
-<h1 align="center">🛡️ Active Directory Basics — TryHackMe</h1>
+---
+layout: default
+title: "Active Directory Basics — TryHackMe"
+description: "Professional documentation of the TryHackMe Active Directory Basics room covering Windows domains, Active Directory administration, Group Policy, SYSVOL, Kerberos, NetNTLM, and enterprise AD architecture."
+category: "Windows Security / Active Directory"
+tags:
+  - TryHackMe
+  - Active Directory
+  - Windows Server
+  - IAM
+  - Kerberos
+  - Group Policy
+  - PowerShell
+  - Blue Team
+---
 
-<p align="center">
-Windows Active Directory Fundamentals • Identity & Access Management • Kerberos • Group Policy
+<div class="ctf-hero">
+
+<h1>Active Directory Basics — TryHackMe</h1>
+
+<p>
+A practical study of Microsoft Active Directory covering Windows domains,
+identity and access management, Domain Controllers, ADUC, Organizational Units,
+Group Policy, SYSVOL, Kerberos, NetNTLM, PowerShell administration, and
+enterprise Active Directory architecture.
 </p>
 
-<p align="center">
+<div class="ctf-badges">
+  <span class="ctf-badge">TryHackMe</span>
+  <span class="ctf-badge">Windows Server</span>
+  <span class="ctf-badge">Active Directory</span>
+  <span class="ctf-badge">IAM</span>
+  <span class="ctf-badge">Kerberos</span>
+  <span class="ctf-badge">Group Policy</span>
+  <span class="ctf-badge">PowerShell</span>
+  <span class="ctf-badge">Blue Team</span>
+  <span class="ctf-badge">Completed</span>
+</div>
 
-![TryHackMe](https://img.shields.io/badge/TryHackMe-Active_Directory_Basics-red?style=for-the-badge&logo=tryhackme)
-![Windows Server](https://img.shields.io/badge/Windows_Server-AD_DS-0078D6?style=for-the-badge&logo=windows)
-![Blue Team](https://img.shields.io/badge/Blue_Team-Windows_Security-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+</div>
 
-</p>
+<div class="ctf-card-grid">
 
----
+<div class="ctf-card">
+<div class="ctf-card-title">Platform</div>
+<div class="ctf-card-value">TryHackMe</div>
+</div>
 
-## 📖 About This Documentation
+<div class="ctf-card">
+<div class="ctf-card-title">Environment</div>
+<div class="ctf-card-value">Windows Active Directory Domain</div>
+</div>
 
-This documentation records my practical completion of the **Active Directory Basics** room on **TryHackMe**.
+<div class="ctf-card">
+<div class="ctf-card-title">Operating System</div>
+<div class="ctf-card-value">Windows Server</div>
+</div>
 
-Rather than publishing challenge answers, this repository documents the concepts learned, administrative operations performed, and Windows Active Directory fundamentals explored throughout the lab. The room introduces how enterprise Windows domains are structured and how administrators manage identities, computers, policies, and authentication inside an Active Directory environment.
+<div class="ctf-card">
+<div class="ctf-card-title">Primary Focus</div>
+<div class="ctf-card-value">Windows Administration &amp; Security</div>
+</div>
 
-> **Educational Notice**
->
-> This repository is created solely for educational and portfolio purposes.
->
-> - Challenge flags have been removed.
-> - Passwords and credentials have been redacted.
-> - No challenge answers are published.
+<div class="ctf-card">
+<div class="ctf-card-title">Authentication</div>
+<div class="ctf-card-value">Kerberos &amp; NetNTLM</div>
+</div>
 
----
+<div class="ctf-card">
+<div class="ctf-card-title">Administrative Tools</div>
+<div class="ctf-card-value">ADUC, PowerShell &amp; GPMC</div>
+</div>
 
-# 📑 Table of Contents
-
-- [1. Learning Objectives](#1-learning-objectives)
-- [2. Lab Environment](#2-lab-environment)
-- [3. Active Directory Fundamentals](#3-active-directory-fundamentals)
-- [4. Task 2 — Windows Domains](#4-task-2--windows-domains)
-- [5. Task 3 — Active Directory Objects](#5-task-3--active-directory-objects)
-- [6. Task 4 — Managing Users](#6-task-4--managing-users)
-- [7. Task 5 — Managing Computers](#7-task-5--managing-computers)
-- [8. Task 6 — Group Policy Objects & SYSVOL](#8-task-6--group-policy-objects--sysvol)
-- [9. Task 7 — Authentication](#9-task-7--authentication)
-- [10. Task 8 — Trees, Forests & Trust Relationships](#10-task-8--trees-forests--trust-relationships)
-- [11. PowerShell Commands Used](#11-powershell-commands-used)
-- [12. Security Best Practices Learned](#12-security-best-practices-learned)
-- [13. Skills Demonstrated](#13-skills-demonstrated)
-- [14. Key Takeaways](#14-key-takeaways)
-- [15. References](#15-references)
-
----
-
-# 1. Learning Objectives
-
-The objective of this room was to understand the foundational building blocks of **Microsoft Active Directory** and perform common administrative operations inside a Windows domain.
-
-## Objectives Completed
-
-- ✅ Understand Windows Domains.
-- ✅ Understand the purpose of Active Directory Domain Services.
-- ✅ Explore Domain Controllers and centralized authentication.
-- ✅ Navigate Active Directory Users and Computers (ADUC).
-- ✅ Understand Users, Groups, Computers, and Machine Accounts.
-- ✅ Create and organize Organizational Units.
-- ✅ Perform user administration using ADUC and PowerShell.
-- ✅ Understand Group Policy Objects and SYSVOL.
-- ✅ Learn Kerberos and NetNTLM authentication.
-- ✅ Understand Trees, Forests, and Trust Relationships.
+</div>
 
 ---
 
-# 2. Lab Environment
+## Navigation
+
+<div class="ctf-toc">
+
+<div class="ctf-toc-title">Documentation Map</div>
+
+- [Mission](#mission)
+- [Lab Environment](#lab-environment)
+- [Learning Objectives](#learning-objectives)
+- [Active Directory Fundamentals](#active-directory-fundamentals)
+- [Windows Domains](#windows-domains)
+- [Domain Controllers](#domain-controllers)
+- [Active Directory Objects](#active-directory-objects)
+- [Organizational Units](#organizational-units)
+- [Task 2 — Windows Domains](#task-2--windows-domains)
+- [Task 3 — Active Directory Objects](#task-3--active-directory-objects)
+- [Task 4 — Managing Users](#task-4--managing-users)
+- [Task 5 — Managing Computers](#task-5--managing-computers)
+- [Task 6 — Group Policy Objects & SYSVOL](#task-6--group-policy-objects--sysvol)
+- [Task 7 — Authentication](#task-7--authentication)
+- [Task 8 — Trees, Forests & Trust Relationships](#task-8--trees-forests--trust-relationships)
+- [PowerShell Administration](#powershell-administration)
+- [Security Best Practices](#security-best-practices)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Key Findings](#key-findings)
+- [Lessons Learned](#lessons-learned)
+- [References](#references)
+- [Repository Structure](#repository-structure)
+- [Responsible Use](#responsible-use)
+
+</div>
+
+---
+
+## Mission
+
+The **Active Directory Basics** room provides practical exposure to the foundational components of Microsoft Active Directory and Windows domain administration.
+
+The objective of the lab was to understand how enterprise Windows environments centrally manage:
+
+- User identities.
+- Computer accounts.
+- Security groups.
+- Organizational Units.
+- Authentication.
+- Group Policy.
+- SYSVOL.
+- Domain Controllers.
+- Trust relationships.
+- Administrative operations through graphical and PowerShell interfaces.
+
+The documentation focuses on the technical concepts and administrative workflows practiced during the lab rather than publishing challenge-specific answers.
+
+<div class="callout info">
+
+<div class="callout-title">Educational Scope</div>
+
+This repository documents the concepts, administrative operations, and Windows security fundamentals explored during the TryHackMe lab. Challenge flags, passwords, credentials, and challenge-specific answers have been intentionally redacted.
+
+</div>
+
+---
+
+## Lab Environment
 
 | Component | Details |
-|-----------|---------|
+|---|---|
 | **Platform** | TryHackMe |
 | **Room** | Active Directory Basics |
 | **Operating System** | Windows Server |
@@ -84,45 +152,73 @@ The objective of this room was to understand the foundational building blocks of
 | **Authentication** | Kerberos & NetNTLM |
 | **Skill Category** | Windows Administration / Blue Team Fundamentals |
 
----
-
-## Technologies Used
+### Technologies Used
 
 | Technology | Purpose |
-|------------|---------|
-| Active Directory Domain Services | Identity Management |
-| Domain Controller | Authentication & Authorization |
-| Organizational Units | Logical Administration |
-| Group Policy Objects | Security Policy Deployment |
-| SYSVOL | Group Policy Distribution |
-| PowerShell | Administrative Automation |
-| Kerberos | Ticket-Based Authentication |
+|---|---|
+| **Active Directory Domain Services** | Centralized identity and directory management |
+| **Domain Controller** | Authentication, authorization, and directory services |
+| **Organizational Units** | Logical administration and policy targeting |
+| **Group Policy Objects** | Centralized Windows configuration and security policy |
+| **SYSVOL** | Group Policy and script distribution |
+| **PowerShell** | Administrative automation and Active Directory management |
+| **Kerberos** | Ticket-based domain authentication |
+| **NetNTLM** | Legacy challenge-response authentication |
 
 ---
 
-# 3. Active Directory Fundamentals
+## Learning Objectives
 
-## 3.1 What is Active Directory?
+The lab objectives were to understand the foundational building blocks of Microsoft Active Directory and perform common administrative operations inside a Windows domain.
 
-**Active Directory (AD)** is Microsoft's centralized directory service used in Windows enterprise environments. It stores information about identities, computers, groups, printers, shared resources, and security policies in a structured database.
+### Objectives Completed
 
-Instead of maintaining separate local accounts on each computer, organizations authenticate users against a centralized Domain Controller.
+- Understand Windows Domains.
+- Understand the purpose of Active Directory Domain Services.
+- Explore Domain Controllers and centralized authentication.
+- Navigate Active Directory Users and Computers (ADUC).
+- Understand Users, Groups, Computers, and Machine Accounts.
+- Create and organize Organizational Units.
+- Perform user administration using ADUC and PowerShell.
+- Understand Group Policy Objects and SYSVOL.
+- Learn Kerberos and NetNTLM authentication.
+- Understand Trees, Forests, and Trust Relationships.
 
-### Core Responsibilities of Active Directory
+---
+
+# Active Directory Fundamentals
+
+## What is Active Directory?
+
+**Active Directory (AD)** is Microsoft's centralized directory service used in Windows enterprise environments.
+
+It stores and manages information about identities, computers, groups, organizational structures, and other directory objects. Active Directory Domain Services also provides the infrastructure required for centralized authentication, authorization, and policy management.
+
+Instead of maintaining independent identities and security policies on every workstation, organizations can manage domain resources through a centralized directory and Domain Controllers.
+
+### Core Responsibilities
 
 | Function | Description |
-|----------|-------------|
-| Authentication | Verifies user and computer identities. |
-| Authorization | Determines permissions after authentication. |
-| Identity Management | Stores users, computers, groups, and policies. |
-| Policy Enforcement | Applies Group Policy Objects across the domain. |
-| Resource Management | Controls access to shared network resources. |
+|---|---|
+| **Authentication** | Verifies the identity of users and computers. |
+| **Authorization** | Determines what authenticated identities are permitted to access. |
+| **Identity Management** | Maintains users, computers, groups, and related directory information. |
+| **Policy Enforcement** | Supports centralized configuration through Group Policy. |
+| **Resource Management** | Helps control access to shared network resources. |
+
+<div class="key-finding">
+
+<div class="key-finding-title">Key Finding</div>
+
+Active Directory provides the centralized identity and policy infrastructure that allows enterprise Windows environments to manage users, computers, authentication, and security configuration at scale.
+
+</div>
 
 ---
 
-## 3.2 Windows Domains
+## Windows Domains
 
-A **Windows Domain** is an administrative boundary containing users, computers, servers, groups, and policies managed through Active Directory.
+A **Windows Domain** is an administrative and security boundary containing users, computers, servers, groups, and policies managed through Active Directory.
 
 ### Benefits of a Windows Domain
 
@@ -132,79 +228,85 @@ A **Windows Domain** is an administrative boundary containing users, computers, 
 - Simplified administration.
 - Scalable enterprise infrastructure.
 
-### Domain Workflow
+### Domain Authentication Architecture
 
 ```text
-          User Login
-               │
-               ▼
-      Domain Controller (AD DS)
-               │
-     Authentication & Authorization
-               │
-               ▼
-    Domain Resources & Services
+         User Login
+              │
+              ▼
+     Domain Controller
+       (AD DS / KDC)
+              │
+              ▼
+ Authentication & Authorization
+              │
+              ▼
+   Domain Resources & Services
 ```
+
+The Domain Controller provides the central infrastructure through which domain identities can authenticate and obtain access to authorized resources.
 
 ---
 
-## 3.3 Domain Controller
+## Domain Controllers
 
 A **Domain Controller (DC)** is a Windows Server running **Active Directory Domain Services (AD DS)**.
 
-The Domain Controller acts as the central authority for authentication and directory management.
+The Domain Controller acts as a central authority for domain authentication and directory operations.
 
-### Responsibilities of a Domain Controller
+### Responsibilities
+
+A Domain Controller can:
 
 - Authenticate users.
 - Authenticate computers.
-- Store Active Directory database.
+- Store the Active Directory database.
 - Host SYSVOL.
-- Provide Kerberos tickets.
-- Work with DNS.
-- Replicate directory information.
+- Provide Kerberos authentication services.
+- Work with DNS for domain service discovery.
+- Replicate directory information with other Domain Controllers.
 
-### Services Running on the Domain Controller
+### Important Services
 
 | Service | Purpose |
-|---------|---------|
-| AD DS | Directory Services |
-| DNS | Service Discovery |
-| Kerberos KDC | Authentication |
-| LDAP | Directory Queries |
-| SYSVOL | Policy Distribution |
-| NetLogon | Domain Authentication |
+|---|---|
+| **AD DS** | Directory services |
+| **DNS** | Service discovery and name resolution |
+| **Kerberos KDC** | Ticket-based authentication |
+| **LDAP** | Directory queries and management |
+| **SYSVOL** | Group Policy and script distribution |
+| **NetLogon** | Domain authentication and related domain operations |
 
 ---
 
-## 3.4 Active Directory Objects
+## Active Directory Objects
 
-Active Directory stores multiple object types.
+Active Directory stores multiple types of directory objects.
 
 | Object | Description |
-|--------|-------------|
-| **Users** | Employee or service identities. |
-| **Groups** | Collections of identities for permission management. |
-| **Computers** | Domain-joined workstations and servers. |
-| **Machine Accounts** | Identity assigned to each joined computer. |
-| **Organizational Units** | Administrative containers. |
-| **Printers / Shares** | Network resources managed by AD. |
+|---|---|
+| **Users** | Identities representing people or service identities |
+| **Groups** | Collections of identities used for permission management |
+| **Computers** | Domain-joined workstations and servers |
+| **Machine Accounts** | Directory identities representing joined computers |
+| **Organizational Units** | Administrative containers used to organize objects |
+| **Printers / Shares** | Network resources that can be represented or managed within the environment |
 
 ---
 
-## 3.5 Organizational Units (OUs)
+## Organizational Units
 
-Organizational Units are logical containers used to organize Active Directory objects.
+An **Organizational Unit (OU)** is a logical container inside Active Directory used to organize directory objects.
 
-### Why OUs are Important
+OUs are particularly important for:
 
-- Apply Group Policies.
-- Delegate permissions.
-- Organize departments.
-- Separate workstations from servers.
-- Improve scalability.
+- Applying Group Policy.
+- Delegating administrative permissions.
+- Organizing departments.
+- Separating workstations from servers.
+- Improving administrative scalability.
 
-Example enterprise OU hierarchy:
+### Example Enterprise OU Hierarchy
 
 ```text
 THM-AD.LOCAL
@@ -221,13 +323,17 @@ THM-AD.LOCAL
 └── Domain Controllers
 ```
 
-> **Best Practice**
->
-> Use Organizational Units to separate resources based on administration and security requirements rather than physical location alone.
+<div class="callout">
+
+<div class="callout-title">Best Practice</div>
+
+Organizational Units should be designed around administrative and security requirements rather than relying only on an organization's reporting structure. Separating workstations, servers, service accounts, and Domain Controllers can simplify policy targeting and delegated administration.
+
+</div>
 
 ---
 
-# 4. Task 2 — Windows Domains
+# Task 2 — Windows Domains
 
 ## Objective
 
@@ -235,117 +341,120 @@ Understand how Windows Domains centralize authentication and resource management
 
 ### Practical Activity
 
-During this task I explored the Windows Server environment acting as the Domain Controller and identified the services responsible for centralized authentication.
+During this task, the Windows Server environment acting as the Domain Controller was explored, including the services responsible for centralized authentication and domain management.
 
-### What I Learned
+### What Was Learned
 
-- Credentials are stored inside Active Directory.
-- Authentication is performed by the Domain Controller.
+- Domain identities are managed through Active Directory.
+- Authentication is performed through domain authentication infrastructure.
 - Domain users can authenticate across multiple domain-joined machines.
-- Policies are centrally managed instead of configured individually.
+- Policies can be managed centrally instead of being configured independently on every system.
 
 ### Windows Domain Architecture
 
-| Component | Role in the Domain |
-|-----------|--------------------|
-| Domain Controller | Identity provider |
-| Active Directory | Central directory database |
-| DNS | Finds domain services |
-| Client Workstations | Authenticate against the DC |
-| Group Policy | Applies centralized configuration |
+| Component | Role |
+|---|---|
+| **Domain Controller** | Identity and authentication authority |
+| **Active Directory** | Central directory service |
+| **DNS** | Domain service discovery |
+| **Client Workstations** | Domain-joined systems authenticating against the domain |
+| **Group Policy** | Centralized configuration and policy management |
 
 ---
 
-## 📷 Figure 2.1 — Windows Domain Environment
+## Evidence — Windows Domain Environment
 
-![Windows Domain Environment](assets/figure-2.1-windows-domain-environment.png)
+<figure>
 
-*Windows Server Domain Controller environment used throughout the Active Directory lab. The server hosts Active Directory Domain Services and administrative management tools.*
+<img src="assets/figure-2.1-windows-domain-environment.png" alt="Windows Server domain environment used during the Active Directory Basics lab">
+
+<figcaption>
+Figure 2.1 — Windows Server Domain Controller environment used throughout the Active Directory lab. The environment hosts Active Directory Domain Services and administrative management tools.
+</figcaption>
+
+</figure>
+
+### Key Concept
+
+A Windows Domain allows administrators to manage a large number of devices and identities through centralized authentication and policy infrastructure instead of maintaining independent local accounts and configurations on every machine.
+
+<div class="key-finding">
+
+<div class="key-finding-title">Security Insight</div>
+
+Centralized authentication improves administrative consistency, access control, auditing, and policy enforcement across enterprise Windows environments.
+
+</div>
 
 ---
 
-## Key Concept Learned
-
-A Windows Domain allows administrators to manage hundreds or thousands of devices through a centralized authentication infrastructure instead of maintaining independent local accounts.
-
-> **Security Insight**
->
-> Centralized authentication improves auditing, access control, password policy enforcement, and administrative consistency across enterprise Windows environments.
-
----
-
-# 5. Task 3 — Active Directory Objects
+# Task 3 — Active Directory Objects
 
 ## Objective
 
-Explore the structure of Active Directory and understand how directory objects such as users, groups, computers, and Organizational Units are organized within a Windows Domain.
+Explore the structure of Active Directory and understand how users, groups, computers, and Organizational Units are organized within a Windows Domain.
 
-This task introduced **Active Directory Users and Computers (ADUC)**, the primary Microsoft Management Console (MMC) snap-in used for day-to-day administration of Active Directory.
+This task introduced **Active Directory Users and Computers (ADUC)**, the primary Microsoft Management Console (MMC) snap-in used for common Active Directory administration.
 
 ---
 
-## 5.1 Active Directory Users and Computers (ADUC)
+## Active Directory Users and Computers
 
-**Active Directory Users and Computers (ADUC)** provides a graphical interface for managing directory objects within a Windows domain.
+**Active Directory Users and Computers (ADUC)** provides a graphical interface for managing directory objects inside a Windows domain.
 
-Using ADUC, administrators can:
+Administrators can use ADUC to:
 
 - Create and delete user accounts.
 - Manage security groups.
-- Organize Organizational Units (OUs).
-- Join and manage computer objects.
+- Organize Organizational Units.
+- Manage computer objects.
 - Reset passwords.
 - Delegate administrative permissions.
 
-### Administrative Tasks Performed
+### Administrative Activities
 
-During the lab, I:
+During the lab:
 
-1. Opened **Active Directory Users and Computers** from the Domain Controller.
-2. Navigated through the domain hierarchy.
-3. Explored built-in containers and Organizational Units.
-4. Identified users, groups, and computers managed by Active Directory.
-
----
-
-## 📷 Figure 3.1 — Active Directory Users and Computers Console
-
-![Figure 3.1 — Active Directory Users and Computers Console](assets/figure-3.1-active-directory-users-and-computers.png)
-
-*The Active Directory Users and Computers console displaying the THM-AD.LOCAL domain hierarchy, Organizational Units, users, groups, and computer containers.*
+1. Active Directory Users and Computers was opened from the Domain Controller.
+2. The domain hierarchy was explored.
+3. Built-in containers and Organizational Units were examined.
+4. Users, groups, and computers managed by Active Directory were identified.
 
 ---
+
+## Evidence — ADUC Console
+
+<figure>
+
+<img src="assets/figure-3.1-active-directory-users-and-computers.png" alt="Active Directory Users and Computers console displaying the domain hierarchy">
+
+<figcaption>
+Figure 3.1 — Active Directory Users and Computers displaying the THM-AD.LOCAL domain hierarchy, Organizational Units, users, groups, and computer containers.
+</figcaption>
+
+</figure>
 
 ### Understanding the ADUC Interface
 
 | Interface Component | Purpose |
-|---------------------|---------|
-| **Domain Tree** | Displays the hierarchical structure of the Active Directory domain. |
-| **Organizational Units** | Logical containers for grouping directory objects. |
-| **Users Container** | Stores user objects and security groups. |
-| **Computers Container** | Stores newly joined domain computers by default. |
-| **Details Pane** | Displays selected directory objects and their properties. |
+|---|---|
+| **Domain Tree** | Displays the hierarchical Active Directory structure |
+| **Organizational Units** | Logical containers for directory objects |
+| **Users Container** | Contains user objects and security groups |
+| **Computers Container** | Default container for newly joined domain computers |
+| **Details Pane** | Displays properties of selected directory objects |
 
 ---
 
-## 5.2 Organizational Unit Structure
+## Organizational Unit Structure
 
-### What is an Organizational Unit?
-
-An **Organizational Unit (OU)** is a logical container inside Active Directory that groups users, computers, groups, and other objects based on administrative or organizational requirements.
+An **Organizational Unit (OU)** is a logical container that groups users, computers, groups, and other directory objects according to administrative requirements.
 
 Unlike security groups, OUs primarily exist for:
 
 - Administrative delegation.
-- Applying Group Policy Objects.
-- Structuring enterprise resources.
-
-### Why Organizations Use OUs
-
-- Separate departments (HR, Finance, IT, Sales).
-- Separate servers from workstations.
-- Delegate permissions to IT support teams.
-- Apply department-specific security policies.
+- Group Policy application.
+- Directory organization.
 
 ### Example Enterprise OU Design
 
@@ -366,73 +475,87 @@ THM-AD.LOCAL
 
 ### Administrative Observation
 
-The lab environment already contained departmental Organizational Units representing different parts of the organization.
+The lab environment contained departmental Organizational Units representing different parts of the organization.
 
-Each department could receive its own policies and delegated administrative permissions.
-
----
-
-## 📷 Figure 3.2 — Organizational Unit Structure
-
-![Figure 3.2 — Organizational Unit Structure](assets/figure-3.2-organizational-unit-structure.png)
-
-*Organizational Units grouped departmental users and resources into a logical administrative hierarchy.*
+Each department could therefore serve as an administrative and policy-targeting boundary.
 
 ---
 
-> **Best Practice**
->
-> Organize Active Directory based on administrative responsibilities rather than organizational charts alone. Separate infrastructure resources such as servers, service accounts, and workstations into dedicated OUs whenever possible.
+## Evidence — Organizational Unit Structure
+
+<figure>
+
+<img src="assets/figure-3.2-organizational-unit-structure.png" alt="Active Directory Organizational Unit structure">
+
+<figcaption>
+Figure 3.2 — Organizational Units grouping departmental users and resources into a logical administrative hierarchy.
+</figcaption>
+
+</figure>
+
+<div class="callout">
+
+<div class="callout-title">Best Practice</div>
+
+Organize Active Directory based on administrative responsibilities. Separating infrastructure resources such as servers, service accounts, and workstations into dedicated OUs can simplify Group Policy targeting and delegated administration.
+
+</div>
 
 ---
 
-## 5.3 Domain Users Container
+## Domain Users Container
 
 ### Understanding User Objects
 
 User objects represent identities inside the Windows domain.
 
-Each user account contains multiple attributes including:
+A user account contains attributes such as:
 
 | Attribute | Description |
-|-----------|-------------|
-| Username | User logon identity. |
-| Display Name | Friendly user name. |
-| Email Address | User email attribute. |
-| Department | Organizational metadata. |
-| Group Membership | Determines permissions. |
-| Security Identifier (SID) | Unique identity assigned by Windows. |
+|---|---|
+| **Username** | User logon identity |
+| **Display Name** | Friendly user name |
+| **Email Address** | User email attribute |
+| **Department** | Organizational metadata |
+| **Group Membership** | Groups to which the account belongs |
+| **Security Identifier (SID)** | Unique Windows security identity |
 
-### Administrative Tasks Performed
+### Administrative Activities
 
-Inside the **Domain Users** container, I:
+Inside the **Domain Users** container:
 
-- Reviewed available user accounts.
-- Distinguished user accounts from security groups.
-- Explored account properties and descriptions.
-- Observed how users are stored within Active Directory.
+- Available user accounts were reviewed.
+- User accounts were distinguished from security groups.
+- Account properties and descriptions were explored.
+- The organization of users inside Active Directory was observed.
 
 ### User vs Security Group
 
 | User Object | Security Group |
-|-------------|----------------|
-| Represents one identity. | Represents a collection of identities. |
-| Used for authentication. | Used for permission assignment. |
-| Has a password and SID. | Has group membership and ACL assignments. |
+|---|---|
+| Represents an individual identity | Represents a collection of identities |
+| Used for authentication | Primarily used for permission assignment |
+| Has a password and SID | Has group membership and security permissions |
 
 ---
 
-## 📷 Figure 3.3 — Domain Users Container
+## Evidence — Domain Users Container
 
-![Figure 3.3 — Domain Users Container](assets/figure-3.3-domain-users-container.png)
+<figure>
 
-*The Domain Users container displaying user accounts and security groups managed inside Active Directory.*
+<img src="assets/figure-3.3-domain-users-container.png" alt="Domain Users container displaying Active Directory users and groups">
+
+<figcaption>
+Figure 3.3 — Domain Users container displaying user accounts and security groups managed inside Active Directory.
+</figcaption>
+
+</figure>
 
 ---
 
 ## Machine Accounts
 
-When a Windows computer joins the domain, Active Directory automatically creates a **Machine Account**.
+When a Windows computer joins an Active Directory domain, a corresponding **computer account** is created in the directory.
 
 ### Naming Convention
 
@@ -446,37 +569,35 @@ Example:
 TOM-PC$
 ```
 
-Machine accounts establish trust between the workstation and the Domain Controller.
+The machine account represents the computer's identity within the domain and participates in the computer's trust relationship with the Domain Controller.
+
+### Key Concepts
+
+- Active Directory stores multiple types of directory objects.
+- Organizational Units provide logical administrative structure.
+- Users and groups have different purposes.
+- Machine accounts represent domain-joined computers.
+- ADUC provides a graphical interface for common domain administration.
 
 ---
 
-### Key Concepts Learned from Task 3
-
-- Active Directory stores multiple object types.
-- Organizational Units organize directory objects logically.
-- Users and Groups serve different administrative purposes.
-- Machine accounts are automatically generated when computers join the domain.
-- ADUC is the primary administration console for Windows Domains.
-
----
-
-# 6. Task 4 — Managing Users
+# Task 4 — Managing Users
 
 ## Objective
 
 Perform administrative operations on user accounts using Active Directory Users and Computers and Windows PowerShell.
 
-This task simulated a real-world helpdesk or domain administrator workflow where a user account required administrative intervention.
+This task simulated a common helpdesk or domain administrator workflow involving intervention on a user account.
 
 ---
 
-## 6.1 User Administration Workflow
+## User Administration Workflow
 
 ### Administrative Scenario
 
-The task involved locating a user account inside Active Directory and performing administrative operations without exposing sensitive credentials.
+The task involved locating a user account within Active Directory and performing administrative operations without exposing sensitive credential information.
 
-### Workflow Performed
+### Workflow
 
 1. Connected to the Domain Controller using Remote Desktop.
 2. Opened **Active Directory Users and Computers**.
@@ -486,9 +607,9 @@ The task involved locating a user account inside Active Directory and performing
 6. Performed password administration.
 7. Verified successful authentication.
 
-### Administrative Purpose
+### Typical Administrative Responsibilities
 
-Typical enterprise helpdesk responsibilities include:
+Common enterprise helpdesk activities include:
 
 - Resetting passwords.
 - Unlocking accounts.
@@ -498,33 +619,39 @@ Typical enterprise helpdesk responsibilities include:
 
 ---
 
-## 📷 Figure 4.1 — Active Directory User Account Management
+## Evidence — User Account Management
 
-![Figure 4.1 — Active Directory User Account Management](assets/figure-4.1-user-account-management.png)
+<figure>
 
-*User account properties displayed inside Active Directory Users and Computers prior to performing administrative changes.*
+<img src="assets/figure-4.1-user-account-management.png" alt="Active Directory user account properties">
+
+<figcaption>
+Figure 4.1 — User account properties displayed inside Active Directory Users and Computers before performing administrative changes.
+</figcaption>
+
+</figure>
 
 ---
 
 ## Reviewing User Properties
 
-The user properties window provides information including:
+The user properties interface provides information through multiple tabs.
 
 | Tab | Purpose |
-|-----|---------|
-| General | Basic account information. |
-| Address | Office and location details. |
-| Account | Logon configuration and password settings. |
-| Member Of | Group memberships. |
-| Profile | User profile configuration. |
+|---|---|
+| **General** | Basic account information |
+| **Address** | Office and location information |
+| **Account** | Logon configuration and password settings |
+| **Member Of** | Group memberships |
+| **Profile** | User profile configuration |
 
 ---
 
-## 6.2 Password Reset Using PowerShell
+## Password Administration with PowerShell
 
-### Why Use PowerShell?
+### Why PowerShell?
 
-PowerShell provides a repeatable and scriptable interface for Active Directory administration.
+PowerShell provides a repeatable and scriptable interface for Windows and Active Directory administration.
 
 Advantages include:
 
@@ -532,12 +659,15 @@ Advantages include:
 - Auditing.
 - Bulk administration.
 - Remote administration.
+- Repeatable administrative workflows.
 
-### PowerShell Command Used
+### Password Reset Command
 
 ```powershell
 Set-ADAccountPassword -Identity <username> -Reset
 ```
+
+The command resets the password associated with the specified Active Directory account. The actual credential value used during the lab is intentionally not included.
 
 ### Additional Administrative Commands
 
@@ -559,21 +689,33 @@ Enable an account:
 Enable-ADAccount -Identity <username>
 ```
 
-### Security Note
+### Credential Handling
 
-All passwords and sensitive credential values used during the lab have been removed from this documentation.
+<div class="callout warning">
+
+<div class="callout-title">Credential Redaction</div>
+
+All passwords and sensitive credential values used during the lab have been removed from this portfolio documentation.
 
 ```text
 Password: [REDACTED]
 ```
 
+</div>
+
 ---
 
-## 📷 Figure 4.2 — Password Reset Using PowerShell
+## Evidence — Password Reset Using PowerShell
 
-![Figure 4.2 — Password Reset Using PowerShell](assets/figure-4.2-password-reset-powershell.png)
+<figure>
 
-*Windows PowerShell performing an Active Directory password reset operation using delegated administrative privileges.*
+<img src="assets/figure-4.2-password-reset-powershell.png" alt="PowerShell performing an Active Directory password reset">
+
+<figcaption>
+Figure 4.2 — Windows PowerShell performing an Active Directory password reset operation using delegated administrative privileges.
+</figcaption>
+
+</figure>
 
 ---
 
@@ -581,96 +723,102 @@ Password: [REDACTED]
 
 ### What is Delegation?
 
-Delegation allows administrators to grant limited permissions over a specific Organizational Unit without assigning full **Domain Administrator** privileges.
+Administrative delegation allows organizations to grant limited permissions over specific Active Directory objects or Organizational Units without assigning unrestricted **Domain Administrator** privileges.
 
-### Examples of Delegated Permissions
+### Examples
 
 | Role | Delegated Permission |
-|------|----------------------|
-| Helpdesk Technician | Reset passwords and unlock accounts. |
-| HR Administrator | Create and disable employee accounts. |
-| IT Support | Join computers to the domain. |
-| Department Administrator | Manage users inside a specific OU. |
+|---|---|
+| **Helpdesk Technician** | Reset passwords and unlock accounts |
+| **HR Administrator** | Create and disable employee accounts |
+| **IT Support** | Join computers to the domain |
+| **Department Administrator** | Manage users inside a specific OU |
 
-### Why Delegation is Important
+### Why Delegation Matters
 
-- Reduces privilege abuse.
+- Reduces excessive privilege.
 - Limits administrative scope.
-- Improves auditing.
-- Supports least privilege.
+- Improves accountability and auditing.
+- Supports the Principle of Least Privilege.
 
-> **Security Insight**
->
-> Never assign Domain Admin privileges for routine helpdesk tasks. Delegate only the permissions required to perform the assigned administrative responsibilities.
+<div class="key-finding">
+
+<div class="key-finding-title">Security Insight</div>
+
+Routine helpdesk operations should not require unrestricted Domain Administrator privileges. Delegated permissions should be scoped to the actual administrative responsibility.
+
+</div>
 
 ---
 
-## 6.3 Login Verification
+## Login Verification
 
-After resetting the password, the updated account credentials were used to authenticate successfully against the domain.
+After the password administration operation, the updated account credentials were used to verify successful domain authentication.
 
-### Verification Steps
+### Verification Workflow
 
 1. Sign out of the administrator session.
 2. Select the managed domain account.
-3. Authenticate using updated credentials.
+3. Authenticate using the updated credentials.
 4. Confirm successful desktop login.
 
-This verifies that Active Directory accepted the administrative change and replicated the updated credentials.
+This verification demonstrated that the account modification was accepted by the Active Directory environment and that the updated credentials could be used for authentication.
 
 ---
 
-## 📷 Figure 4.3 — Successful User Login Verification
+## Evidence — Successful User Login
 
-![Figure 4.3 — Successful User Login Verification](assets/figure-4.3-successful-user-login-verification.png)
+<figure>
 
-*Successful authentication into a Windows workstation using the managed Active Directory user account.*
+<img src="assets/figure-4.3-successful-user-login-verification.png" alt="Successful Windows login using the managed Active Directory account">
 
----
+<figcaption>
+Figure 4.3 — Successful authentication into a Windows workstation using the managed Active Directory user account.
+</figcaption>
+
+</figure>
 
 ### Challenge Artifact
 
-For ethical reasons, challenge-specific output has been removed.
+Challenge-specific output has been intentionally removed.
 
 ```text
 Challenge Flag: [REDACTED]
 ```
 
----
-
-## Key Concepts Learned from Task 4
+### Key Concepts
 
 - User administration can be performed through ADUC or PowerShell.
 - PowerShell enables repeatable administrative workflows.
-- Delegation follows the Principle of Least Privilege.
-- Successful login verifies changes made inside Active Directory.
-- Password values and challenge artifacts should never be published in portfolio documentation.
+- Delegation supports the Principle of Least Privilege.
+- Successful authentication provides verification of the account change.
+- Passwords and challenge artifacts should not be exposed in portfolio documentation.
 
 ---
 
-# 7. Task 5 — Managing Computers
+# Task 5 — Managing Computers
 
 ## Objective
 
 Organize computer objects inside Active Directory by creating a dedicated **Workstations Organizational Unit (OU)** and moving workstation computer accounts into the new administrative container.
 
-This task demonstrates how enterprise administrators structure Active Directory for scalability, policy management, and delegated administration.
+This demonstrates how enterprise administrators can structure Active Directory for scalability, policy management, and delegated administration.
 
 ---
 
-## 7.1 Understanding Computer Objects in Active Directory
+## Understanding Computer Objects
 
-When a Windows computer joins an Active Directory domain, it automatically receives a **Computer Object** inside the directory.
+When a Windows computer joins an Active Directory domain, a corresponding **computer object** is created in the directory.
 
-A computer object functions similarly to a user account—it has its own identity, security identifier (SID), and trust relationship with the Domain Controller.
+The computer object represents the machine's identity within the domain and participates in its trust relationship with the Domain Controller.
 
 ### Categories of Computer Objects
 
 | Category | Purpose |
-|----------|---------|
-| **Workstations** | Employee desktops and laptops joined to the domain. |
-| **Servers** | Infrastructure systems providing organizational services. |
-| **Domain Controllers** | Servers responsible for authentication and directory services. |
+|---|---|
+| **Workstations** | Employee desktops and laptops joined to the domain |
+| **Servers** | Infrastructure systems providing organizational services |
+| **Domain Controllers** | Servers providing authentication and directory services |
 
 ### Why Separate Computer Objects?
 
@@ -703,15 +851,17 @@ THM-AD.LOCAL
     └── DC01
 ```
 
-> **Best Practice**
->
-> Always separate workstation, server, and domain controller objects into dedicated Organizational Units to simplify policy management and security administration.
+<div class="callout">
+
+<div class="callout-title">Best Practice</div>
+
+Separating workstation, server, and Domain Controller objects into dedicated Organizational Units can simplify policy targeting, delegated administration, and security management.
+
+</div>
 
 ---
 
-## 7.2 Creating the Workstations Organizational Unit
-
-### Administrative Activity
+## Creating the Workstations OU
 
 A new Organizational Unit named **Workstations** was created to organize endpoint devices separately from servers.
 
@@ -727,27 +877,31 @@ A new Organizational Unit named **Workstations** was created to organize endpoin
 
 ---
 
-## 📷 Figure 5.1 — Creating the Workstations Organizational Unit
+## Evidence — Creating the Workstations OU
 
-![Figure 5.1 — Creating the Workstations Organizational Unit](assets/figure-5.1-creating-workstations-ou.png)
+<figure>
 
-*Creation of a dedicated Organizational Unit named **Workstations** inside the Active Directory hierarchy.*
+<img src="assets/figure-5.1-creating-workstations-ou.png" alt="Creating the Workstations Organizational Unit in Active Directory">
 
----
+<figcaption>
+Figure 5.1 — Creation of a dedicated Organizational Unit named <strong>Workstations</strong> inside the Active Directory hierarchy.
+</figcaption>
 
-### Why Protect an OU from Accidental Deletion?
+</figure>
 
-Enabling accidental deletion protection prevents administrators from unintentionally removing Organizational Units that contain production resources.
+### Accidental Deletion Protection
+
+Enabling protection against accidental deletion provides an additional safeguard against unintentionally removing an Organizational Unit containing production resources.
 
 Benefits include:
 
-- Prevents accidental infrastructure deletion.
-- Adds an additional administrative safeguard.
-- Encourages safer Active Directory management practices.
+- Reducing accidental infrastructure deletion.
+- Adding an administrative safety control.
+- Encouraging safer Active Directory management.
 
 ---
 
-## 7.3 Moving Computer Objects into the Workstations OU
+## Moving Computer Objects into the Workstations OU
 
 After creating the Organizational Unit, workstation computer objects were moved from the default **Computers** container into the newly created **Workstations** OU.
 
@@ -756,49 +910,51 @@ After creating the Organizational Unit, workstation computer objects were moved 
 1. Locate workstation computer objects.
 2. Select one or more computers.
 3. Right-click → **Move**.
-4. Select **Workstations OU**.
+4. Select the **Workstations** OU.
 5. Confirm the operation.
 6. Verify successful placement.
 
 ---
 
-## 📷 Figure 5.2 — Moving Computer Objects into the OU
+## Evidence — Moving Computer Objects
 
-![Figure 5.2 — Moving Computer Objects into the OU](assets/figure-5.2-moving-computer-objects.png)
+<figure>
 
-*Workstation computer objects moved into the dedicated Workstations Organizational Unit.*
+<img src="assets/figure-5.2-moving-computer-objects.png" alt="Moving workstation computer objects into the Workstations Organizational Unit">
 
----
+<figcaption>
+Figure 5.2 — Workstation computer objects moved into the dedicated Workstations Organizational Unit.
+</figcaption>
+
+</figure>
 
 ### Administrative Verification
 
-After moving the objects:
+After the operation:
 
-- The Workstations OU contained all workstation computer accounts.
+- The Workstations OU contained workstation computer accounts.
 - Server objects remained separate.
-- Future Group Policies could target only workstation devices.
+- Future Group Policies could target workstation devices specifically.
 
-### Benefits Achieved
+### Benefits
 
 | Administrative Benefit | Description |
-|------------------------|-------------|
-| Centralized workstation management | Easier endpoint administration. |
-| Targeted GPO deployment | Policies affect only workstation devices. |
-| Delegated administration | Helpdesk permissions can be scoped to workstations. |
-| Reduced administrative complexity | Cleaner Active Directory hierarchy. |
+|---|---|
+| **Centralized workstation management** | Simplifies endpoint administration |
+| **Targeted GPO deployment** | Policies can target workstation devices |
+| **Delegated administration** | Permissions can be scoped to workstation resources |
+| **Reduced complexity** | Provides a cleaner Active Directory hierarchy |
 
----
-
-## Key Concepts Learned from Task 5
+### Key Concepts
 
 - Computer accounts are Active Directory objects.
-- Organizational Units provide logical administration boundaries.
-- Separating workstations from servers improves security policy management.
-- Active Directory administration becomes more scalable through OU design.
+- OUs provide logical administrative boundaries.
+- Separating workstations from servers improves policy management.
+- Structured OU design improves Active Directory scalability.
 
 ---
 
-# 8. Task 6 — Group Policy Objects & SYSVOL
+# Task 6 — Group Policy Objects & SYSVOL
 
 ## Objective
 
@@ -806,16 +962,16 @@ Understand how Windows administrators deploy centralized configuration and secur
 
 ---
 
-## 8.1 What is a Group Policy Object (GPO)?
+## Group Policy Objects
 
-A **Group Policy Object (GPO)** is a collection of Windows configuration settings that administrators apply to users and computers inside Active Directory.
+A **Group Policy Object (GPO)** is a collection of Windows configuration settings that administrators can apply to users and computers within Active Directory.
 
-Rather than configuring each workstation individually, administrators create policies once and deploy them across Organizational Units.
+Instead of configuring each workstation individually, administrators can define policy once and apply it across appropriate domain scopes.
 
 ### Group Policy Can Configure
 
 | User Policies | Computer Policies |
-|---------------|-------------------|
+|---|---|
 | Password Policies | Firewall Rules |
 | Desktop Restrictions | Windows Defender |
 | Login Scripts | BitLocker |
@@ -824,75 +980,75 @@ Rather than configuring each workstation individually, administrators create pol
 
 ---
 
-## How Group Policy Works
+## Group Policy Architecture
 
 ```text
 Administrator
-      │
-      ▼
+     │
+     ▼
 Group Policy Management
-      │
-      ▼
+     │
+     ▼
 Link GPO to Organizational Unit
-      │
-      ▼
-SYSVOL Share
-      │
-      ▼
+     │
+     ▼
+SYSVOL / Policy Distribution
+     │
+     ▼
 Domain Workstations & Users
 ```
 
 ### Policy Targets
 
-GPOs can be linked to:
+GPOs can be associated with:
 
 | Target | Purpose |
-|--------|---------|
-| Site | Apply policies based on physical location. |
-| Domain | Apply policies to the entire domain. |
-| Organizational Unit | Apply policies to specific departments or systems. |
+|---|---|
+| **Site** | Policies based on Active Directory site topology |
+| **Domain** | Policies applicable at domain scope |
+| **Organizational Unit** | Policies targeted to specific organizational resources |
 
 ---
 
-## 8.2 Group Policy Processing Order
+## Group Policy Processing Order
 
-Windows processes Group Policies using the **LSDOU** order.
+Windows Group Policy processing follows the **LSDOU** model:
 
 | Order | Meaning |
-|-------|---------|
+|---|---|
 | **L** | Local Computer Policy |
 | **S** | Site Policy |
 | **D** | Domain Policy |
 | **OU** | Organizational Unit Policy |
 
-Policies applied later can override previous policies depending on inheritance and enforcement settings.
+Policies processed later can take precedence depending on inheritance, enforcement, filtering, and other Group Policy configuration.
 
 ---
 
 ## Group Policy Inheritance
 
-Organizational Units inherit policies from parent containers unless inheritance is blocked or enforcement is configured.
+Organizational Units can inherit policies from parent containers unless inheritance is blocked or other policy configuration changes the resulting processing behavior.
 
-### Policy Inheritance Example
+### Example
 
 ```text
 Domain Policy
-      │
-      ▼
+     │
+     ▼
 Departments OU
-      │
-      ├── HR OU
-      ├── Finance OU
-      └── IT OU
+     │
+     ├── HR OU
+     ├── Finance OU
+     └── IT OU
 ```
 
-Each child OU receives inherited policies unless specifically configured otherwise.
+This hierarchical model helps administrators establish broad policies while allowing more specific policy configuration at lower levels.
 
 ---
 
-## 8.3 Group Policy Management Console (GPMC)
+## Group Policy Management Console
 
-The **Group Policy Management Console** is Microsoft's primary tool for managing GPOs.
+The **Group Policy Management Console (GPMC)** is Microsoft's administrative interface for managing Group Policy.
 
 Administrators use GPMC to:
 
@@ -900,33 +1056,38 @@ Administrators use GPMC to:
 - Link GPOs to Organizational Units.
 - View inheritance.
 - Configure delegation.
-- Backup and restore policies.
+- Back up and restore policies.
+- Troubleshoot policy application.
 
 ---
 
-## 📷 Figure 6.1 — Group Policy Management Console
+## Evidence — Group Policy Management Console
 
-![Figure 6.1 — Group Policy Management Console](assets/figure-6.1-group-policy-management-console.png)
+<figure>
 
-*Group Policy Management Console displaying the Active Directory domain, Organizational Units, and linked Group Policy Objects.*
+<img src="assets/figure-6.1-group-policy-management-console.png" alt="Group Policy Management Console displaying the Active Directory domain">
 
----
+<figcaption>
+Figure 6.1 — Group Policy Management Console displaying the Active Directory domain, Organizational Units, and linked Group Policy Objects.
+</figcaption>
 
-### Administrative Sections Inside GPMC
+</figure>
+
+### GPMC Sections
 
 | Section | Purpose |
-|----------|---------|
-| Domains | Domain-wide policies. |
-| Group Policy Objects | Available GPOs. |
-| Organizational Units | Policy targets. |
-| Delegation | Permission management. |
-| Group Policy Results | Policy troubleshooting. |
+|---|---|
+| **Domains** | Domain-level policy management |
+| **Group Policy Objects** | Available GPOs |
+| **Organizational Units** | Policy targets |
+| **Delegation** | Permission management |
+| **Group Policy Results** | Policy troubleshooting |
 
 ---
 
-## 8.4 SYSVOL — Group Policy Distribution
+## SYSVOL — Group Policy Distribution
 
-SYSVOL is a shared directory hosted on every Domain Controller.
+**SYSVOL** is a shared directory hosted on Domain Controllers and is used to distribute domain-wide files such as Group Policy-related data and logon scripts.
 
 ### Default SYSVOL Location
 
@@ -934,279 +1095,297 @@ SYSVOL is a shared directory hosted on every Domain Controller.
 C:\Windows\SYSVOL\sysvol\
 ```
 
-### Contents Stored Inside SYSVOL
+### Contents
+
+The documentation identifies the following types of content associated with SYSVOL:
 
 - Group Policy Objects.
-- Login Scripts.
-- Administrative Templates.
-- Policy Configuration Files.
+- Login scripts.
+- Administrative templates.
+- Policy configuration files.
 
----
+### Why SYSVOL Matters
 
-## Why SYSVOL is Important
+SYSVOL is an important component of domain policy distribution.
 
-Every domain-joined computer periodically synchronizes policies from SYSVOL.
+Without functioning SYSVOL infrastructure:
 
-Without SYSVOL:
+- Group Policy distribution can fail.
+- Login scripts can fail to reach clients.
+- Domain configuration can become inconsistent.
 
-- Policies would not propagate.
-- Login scripts would fail.
-- Domain configuration would become inconsistent.
-
----
-
-## SYSVOL Synchronization Workflow
+### SYSVOL Distribution Model
 
 ```text
 Domain Controller
-      │
-      ▼
+     │
+     ▼
 SYSVOL Shared Folder
-      │
-      ▼
+     │
+     ▼
 Domain Computers
-      │
-      ▼
+     │
+     ▼
 Group Policy Refresh
 ```
 
-### Group Policy Refresh
+---
 
-| Target | Refresh Interval |
-|--------|------------------|
-| Computers | Periodically refresh background policies. |
-| Users | Refresh user-specific policies after login and scheduled intervals. |
+## Group Policy Refresh
+
+Domain computers periodically refresh applicable policies.
+
+| Target | Policy Behavior |
+|---|---|
+| **Computers** | Periodically refresh computer policies |
+| **Users** | Apply user-specific policies during login and scheduled refresh |
 
 ---
 
-## 📷 Figure 6.2 — SYSVOL Directory
+## Evidence — SYSVOL Directory
 
-![Figure 6.2 — SYSVOL Directory](assets/figure-6.2-sysvol-directory.png)
+<figure>
 
-*Windows File Explorer displaying the SYSVOL directory structure used for Group Policy storage and replication.*
+<img src="assets/figure-6.2-sysvol-directory.png" alt="Windows File Explorer displaying the SYSVOL directory">
+
+<figcaption>
+Figure 6.2 — Windows File Explorer displaying the SYSVOL directory structure used for Group Policy storage and distribution.
+</figcaption>
+
+</figure>
 
 ---
 
 ## Administrative Importance of SYSVOL
 
 | Feature | Why It Matters |
-|----------|----------------|
-| Shared Folder | Accessible by authenticated domain users. |
-| Replication | Synchronizes policies between Domain Controllers. |
-| GPO Storage | Stores policy configuration files. |
-| Login Scripts | Provides centralized script distribution. |
+|---|---|
+| **Shared Folder** | Provides domain policy and script distribution |
+| **Replication** | Helps synchronize SYSVOL contents between Domain Controllers |
+| **GPO Storage** | Contains Group Policy-related files |
+| **Login Scripts** | Provides centralized script distribution |
 
----
+### Group Policy Security Best Practices
 
-## Group Policy Security Best Practices
+#### Apply GPOs to Appropriate Organizational Units
 
-### Apply GPOs to Organizational Units
+Avoid applying unnecessary policies at the domain root when more specific targeting is appropriate.
 
-Avoid applying unnecessary policies at the domain root unless required.
+#### Test Policies Before Production
 
-### Test Policies Before Production
+Validate GPO behavior before deploying broadly.
 
-Validate GPO behavior before broad deployment.
+#### Use Security Filtering
 
-### Use Security Filtering
+Restrict policy application to intended users and computers where appropriate.
 
-Apply policies only to intended users or computers.
+#### Limit GPO Modification Permissions
 
-### Limit GPO Modification Permissions
+Only trusted administrators should be able to modify production Group Policies.
 
-Only trusted administrators should modify production GPOs.
+<div class="key-finding">
 
-> **Security Insight**
->
-> Unauthorized modification of a Group Policy Object can affect every workstation or server linked to that policy, making GPO security a critical component of enterprise Windows administration.
+<div class="key-finding-title">Security Insight</div>
 
----
+Unauthorized modification of a Group Policy can affect many users or systems simultaneously. Protecting GPO modification permissions is therefore an important Active Directory security control.
 
-## Key Concepts Learned from Task 6
+</div>
+
+### Key Concepts
 
 - Group Policy provides centralized Windows configuration management.
-- GPOs target Sites, Domains, or Organizational Units.
-- SYSVOL distributes policy files throughout the domain.
+- GPOs can target Sites, Domains, or Organizational Units.
+- SYSVOL supports distribution of Group Policy-related files and scripts.
 - Policy inheritance simplifies enterprise administration.
-- Proper GPO design improves both security and operational consistency.
+- Proper GPO design improves security and operational consistency.
 
 ---
 
-# 9. Task 7 — Authentication
+# Task 7 — Authentication
 
 ## Objective
 
-Understand how Windows Domain authentication works and compare **Kerberos** and **NetNTLM**, the two authentication protocols discussed in this lab.
+Understand how Windows Domain authentication works and compare **Kerberos** and **NetNTLM**, the two authentication mechanisms discussed in the lab.
 
-Authentication is one of the most important components of Active Directory because every user, computer, and service depends on it to securely access domain resources.
+Authentication is fundamental to Active Directory because users, computers, and services depend on it to establish identity before accessing protected resources.
 
 ---
 
-## 9.1 Kerberos Authentication
+## Kerberos Authentication
 
-**Kerberos** is the default authentication protocol used by modern Windows Active Directory environments. It provides secure, ticket-based authentication without transmitting user passwords across the network.
+**Kerberos** is the default authentication protocol used by modern Windows Active Directory environments.
+
+It provides ticket-based authentication and avoids transmitting the user's plaintext password across the network during normal Kerberos authentication.
 
 ### Kerberos Components
 
 | Component | Description |
-|-----------|-------------|
-| **KDC (Key Distribution Center)** | Service running on the Domain Controller that issues Kerberos tickets. |
-| **AS (Authentication Service)** | Validates user credentials during login. |
-| **TGT (Ticket Granting Ticket)** | Initial ticket issued after successful authentication. |
-| **TGS (Ticket Granting Service)** | Issues service tickets for accessing network resources. |
-| **Service Ticket** | Ticket presented to a specific service such as SMB, LDAP, or SQL Server. |
+|---|---|
+| **KDC — Key Distribution Center** | Authentication infrastructure running on the Domain Controller |
+| **AS — Authentication Service** | Handles the initial authentication exchange |
+| **TGT — Ticket Granting Ticket** | Ticket used to request additional service tickets |
+| **TGS — Ticket Granting Service** | Issues service tickets for requested services |
+| **Service Ticket** | Ticket used to authenticate to a particular service |
 
 ### Kerberos Authentication Workflow
 
 ```text
 User Login
-    │
-    ▼
+   │
+   ▼
 Authentication Service (AS)
-    │
-    ▼
+   │
+   ▼
 Ticket Granting Ticket (TGT)
-    │
-    ▼
+   │
+   ▼
 Ticket Granting Service (TGS)
-    │
-    ▼
+   │
+   ▼
 Service Ticket
-    │
-    ▼
+   │
+   ▼
 Requested Resource
 ```
 
-### Why Kerberos is Preferred
+### Why Kerberos Is Preferred
 
-- Password is never sent over the network.
-- Supports mutual authentication.
-- Uses encrypted tickets.
-- Reduces replay attack opportunities.
-- Provides centralized authentication through the Domain Controller.
+- Passwords are not transmitted as plaintext during normal Kerberos authentication.
+- Supports mutual authentication in appropriate service configurations.
+- Uses encrypted authentication tickets.
+- Provides centralized authentication through the domain.
+- Enables Single Sign-On across supported domain services.
 
-> **Security Insight**
->
-> Kerberos relies on accurate system time. Significant clock differences between the client and the Domain Controller can cause authentication failures.
+<div class="callout warning">
+
+<div class="callout-title">Security Consideration</div>
+
+Kerberos authentication relies on accurate system time. Significant clock differences between clients and the Domain Controller can cause authentication failures.
+
+</div>
 
 ---
 
-## 9.2 Ticket Granting Ticket (TGT)
+## Ticket Granting Ticket
 
-The **Ticket Granting Ticket** is issued immediately after successful authentication.
+The **Ticket Granting Ticket (TGT)** is obtained following successful initial authentication.
 
-Its purpose is to prove the user's identity when requesting access to additional services without requiring the user to enter credentials again.
+Its purpose is to allow the authenticated identity to request additional service tickets without repeatedly performing the initial authentication process.
 
 ### TGT Characteristics
 
-- Issued once after login.
-- Stored temporarily in memory.
+- Obtained following successful authentication.
+- Stored temporarily by the operating system.
 - Used to request additional service tickets.
-- Expires after a configurable lifetime.
+- Has a configurable lifetime.
 
 ---
 
-## 9.3 Ticket Granting Service (TGS)
+## Ticket Granting Service
 
-When a user accesses a network resource, Kerberos requests a **Service Ticket** from the Ticket Granting Service.
+When a user accesses a network resource, Kerberos can use the TGT to obtain a **service ticket** for the requested service.
 
-Examples of services include:
+Examples include:
 
 | Service | Example |
-|---------|---------|
-| SMB | File Shares |
-| LDAP | Directory Queries |
-| HTTP | Web Applications |
-| MSSQL | SQL Server |
-| CIFS | Shared Resources |
+|---|---|
+| **SMB** | File shares |
+| **LDAP** | Directory services |
+| **HTTP** | Web applications |
+| **MSSQL** | Microsoft SQL Server |
+| **CIFS** | Network file resources |
 
-This allows users to authenticate once and access multiple domain resources securely.
+This ticket-based model enables users to authenticate once and access multiple domain resources without repeatedly providing their password.
 
 ---
 
-## 9.4 NetNTLM Authentication
+## NetNTLM Authentication
 
-**NetNTLM** is a legacy authentication protocol retained for backward compatibility with older Windows systems.
+**NetNTLM** refers to Microsoft's challenge-response authentication mechanisms based on NTLM.
 
-Unlike Kerberos, NetNTLM uses a **challenge-response** authentication mechanism.
+It is retained primarily for compatibility with systems or services where Kerberos cannot be used.
 
 ### NetNTLM Workflow
 
 ```text
 Client
-   │
-   ▼
+  │
+  ▼
 Authentication Challenge
-   │
-   ▼
+  │
+  ▼
 Challenge Response
-   │
-   ▼
+  │
+  ▼
 Server Validation
 ```
 
 ### Important Characteristics
 
-- Password is not transmitted directly.
-- Uses password hashes to calculate responses.
-- Exists primarily for compatibility.
-- Less secure than Kerberos.
+- The password itself is not directly transmitted during the challenge-response exchange.
+- The authentication response is derived from credential material.
+- It exists largely for compatibility with legacy environments.
+- Modern Active Directory environments generally prefer Kerberos where available.
 
 ---
 
-## 9.5 Kerberos vs NetNTLM
+## Kerberos vs NetNTLM
 
 | Kerberos | NetNTLM |
-|----------|----------|
+|---|---|
 | Ticket-based authentication | Challenge-response authentication |
-| Default protocol in modern domains | Legacy protocol |
-| Mutual authentication | Server validates client response |
-| Better security | Compatibility-focused |
-| Preferred in enterprise Windows domains | Used only when Kerberos is unavailable |
+| Default protocol in modern AD environments | Legacy authentication mechanism |
+| Supports mutual authentication in appropriate configurations | Primarily validates the client response |
+| Designed for modern domain authentication | Maintained for compatibility |
+| Preferred when available | Used where Kerberos is unavailable or unsuitable |
 
 ---
 
-## 📷 Figure 7.1 — Windows Authentication Concepts
+## Evidence — Windows Authentication Concepts
 
-![Figure 7.1 — Windows Authentication Concepts](assets/figure-7.1-windows-authentication-concepts.png)
+<figure>
 
-*Kerberos authentication artifacts viewed inside the Windows Active Directory lab environment, demonstrating ticket-based authentication and security event logging.*
+<img src="assets/figure-7.1-windows-authentication-concepts.png" alt="Windows authentication concepts and Kerberos artifacts from the Active Directory lab">
 
----
+<figcaption>
+Figure 7.1 — Kerberos authentication artifacts viewed inside the Windows Active Directory lab environment, demonstrating ticket-based authentication and security event logging.
+</figcaption>
 
-## Authentication Concepts Learned
+</figure>
 
-- Active Directory authenticates identities using Kerberos by default.
-- Kerberos issues tickets instead of transmitting passwords.
+### Authentication Concepts Learned
+
+- Active Directory uses Kerberos as the preferred authentication protocol in modern domain environments.
+- Kerberos uses tickets rather than transmitting plaintext passwords.
 - NetNTLM remains available for legacy compatibility.
-- Authentication is centralized through the Domain Controller.
+- Authentication infrastructure is centralized through Domain Controllers.
 
 ---
 
-# 10. Task 8 — Trees, Forests & Trust Relationships
+# Task 8 — Trees, Forests & Trust Relationships
 
 ## Objective
 
-Understand how Active Directory scales across multiple domains using **Trees**, **Forests**, and **Trust Relationships**.
+Understand how Active Directory scales across multiple domains using **Domains**, **Trees**, **Forests**, and **Trust Relationships**.
 
 ---
 
-## 10.1 Domains
+## Domains
 
 A **Domain** is an administrative boundary containing users, groups, computers, and security policies.
 
-Each domain maintains:
+Each domain maintains its own:
 
-- Its own users.
+- Users.
 - Computers.
 - Security policies.
-- Authentication database.
+- Authentication and directory data.
 
 ---
 
-## 10.2 Trees
+## Trees
 
-A **Tree** is a hierarchy of domains sharing a common namespace.
+An **Active Directory Tree** is a hierarchical collection of domains that share a contiguous DNS namespace.
 
 Example:
 
@@ -1220,17 +1399,17 @@ company.local
 
 ### Tree Characteristics
 
-- Shared namespace.
-- Automatic transitive trust.
-- Hierarchical relationship.
+- Shared contiguous namespace.
+- Hierarchical domain relationship.
+- Automatic transitive trust relationships within the forest's domain structure.
 
 ---
 
-## 10.3 Forests
+## Forests
 
-A **Forest** is the highest-level Active Directory structure.
+An **Active Directory Forest** is the highest-level logical structure in Active Directory.
 
-A forest can contain multiple domain trees with different namespaces.
+A forest can contain multiple domain trees and therefore support different namespaces.
 
 Example:
 
@@ -1245,31 +1424,29 @@ branch.local
 ### Forest Characteristics
 
 | Feature | Description |
-|----------|-------------|
-| Shared Schema | Common object definitions. |
-| Shared Configuration | Shared forest configuration. |
-| Multiple Trees | Different namespaces supported. |
-| Trusts | Authentication across trees. |
+|---|---|
+| **Shared Schema** | Common definitions for directory objects |
+| **Shared Configuration** | Shared forest-wide configuration information |
+| **Multiple Trees** | Supports multiple domain namespaces |
+| **Trusts** | Supports authentication relationships between domains |
 
 ---
 
-## 10.4 Trust Relationships
+## Trust Relationships
 
-Trusts allow identities in one domain to access resources located in another trusted domain.
+Trust relationships allow identities from one domain to be recognized for access to resources in another trusted domain, subject to permissions.
 
-### Types of Trusts
+### Trust Types
 
 | Trust Type | Description |
-|------------|-------------|
-| One-Way Trust | Access allowed in one direction. |
-| Two-Way Trust | Mutual authentication between domains. |
-| Transitive Trust | Trust extends automatically. |
-| Non-Transitive Trust | Trust exists only between specified domains. |
-| Forest Trust | Authentication across forests. |
+|---|---|
+| **One-Way Trust** | Trust relationship operates in one direction |
+| **Two-Way Trust** | Mutual trust relationship between domains |
+| **Transitive Trust** | Trust can extend through the domain hierarchy |
+| **Non-Transitive Trust** | Trust applies only to explicitly connected domains |
+| **Forest Trust** | Supports authentication relationships between forests |
 
----
-
-## Trust Relationship Example
+### Trust Relationship Example
 
 ```text
 +-------------------+
@@ -1285,36 +1462,40 @@ Trusts allow identities in one domain to access resources located in another tru
 +-------------------+
 ```
 
-Trusts enable organizations to share resources securely between departments, subsidiaries, or separate Active Directory forests.
+Trusts can allow organizations to support resource access across separate administrative domains while maintaining their respective directory structures.
 
 ---
 
-## 📷 Figure 8.1 — Active Directory Tree and Forest Structure
+## Evidence — Tree, Forest & Trust Structure
 
-![Figure 8.1 — Active Directory Tree and Forest Structure](assets/figure-8.1-active-directory-tree-and-forest-structure.png)
+<figure>
 
-*Illustration of Tree, Forest, Child Domain, and Trust relationships inside an enterprise Active Directory environment.*
+<img src="assets/figure-8.1-active-directory-tree-and-forest-structure.png" alt="Active Directory tree, forest, child domain and trust relationships">
 
----
+<figcaption>
+Figure 8.1 — Illustration of Tree, Forest, Child Domain, and Trust relationships inside an enterprise Active Directory environment.
+</figcaption>
 
-## Enterprise Importance
+</figure>
 
-Large organizations often use forests and trusts to support:
+### Enterprise Importance
+
+Large organizations can use forests, trees, and trusts to support:
 
 - Multiple business units.
 - Geographic separation.
 - Mergers and acquisitions.
-- Shared authentication between organizations.
+- Shared authentication between organizational environments.
 
 ---
 
-# 11. PowerShell Commands Used
+# PowerShell Administration
 
 PowerShell provides a powerful scripting interface for Active Directory administration.
 
-## Common Active Directory Cmdlets
+The following commands were documented in the original lab material.
 
-### Retrieve User Information
+## Retrieve User Information
 
 ```powershell
 Get-ADUser <username>
@@ -1324,27 +1505,27 @@ Returns information about an Active Directory user.
 
 ---
 
-### Reset User Password
+## Reset User Password
 
 ```powershell
 Set-ADAccountPassword -Identity <username> -Reset
 ```
 
-Resets a user's password using delegated administrative privileges.
+Resets a user's password using the appropriate administrative privileges.
 
 ---
 
-### Unlock a User Account
+## Unlock a User Account
 
 ```powershell
 Unlock-ADAccount -Identity <username>
 ```
 
-Unlocks an account after repeated failed login attempts.
+Unlocks an account after it has become locked.
 
 ---
 
-### Enable a User Account
+## Enable a User Account
 
 ```powershell
 Enable-ADAccount -Identity <username>
@@ -1354,44 +1535,46 @@ Enables a disabled Active Directory account.
 
 ---
 
-### Disable a User Account
+## Disable a User Account
 
 ```powershell
 Disable-ADAccount -Identity <username>
 ```
 
-Temporarily disables a user account.
+Disables an Active Directory user account.
 
 ---
 
-### Create a New Organizational Unit
+## Create an Organizational Unit
 
 ```powershell
 New-ADOrganizationalUnit -Name "Workstations"
 ```
 
-Creates a new Organizational Unit inside Active Directory.
+Creates a new Organizational Unit named `Workstations`.
 
----
-
-## Why PowerShell Matters
+### Why PowerShell Matters
 
 | Benefit | Description |
-|----------|-------------|
-| Automation | Repeat administrative tasks quickly. |
-| Bulk Administration | Modify multiple users or computers. |
-| Scripting | Standardize administrative workflows. |
-| Remote Administration | Manage Active Directory remotely. |
+|---|---|
+| **Automation** | Repeat administrative tasks consistently |
+| **Bulk Administration** | Manage multiple users or computers |
+| **Scripting** | Standardize administrative workflows |
+| **Remote Administration** | Support remote management scenarios |
 
-> **Note**
->
-> All passwords and sensitive parameters used during the TryHackMe lab have been intentionally omitted.
+<div class="callout warning">
+
+<div class="callout-title">Credential Handling</div>
+
+Passwords and sensitive parameters used during the TryHackMe lab have intentionally been omitted from this documentation.
+
+</div>
 
 ---
 
-# 12. Security Best Practices Learned
+# Security Best Practices
 
-## Principle of Least Privilege (PoLP)
+## Principle of Least Privilege
 
 Grant only the permissions required for a user's responsibilities.
 
@@ -1399,160 +1582,262 @@ Grant only the permissions required for a user's responsibilities.
 
 - Reduced attack surface.
 - Better auditing.
-- Limited privilege escalation opportunities.
+- Reduced opportunity for privilege abuse.
+- Smaller administrative blast radius.
 
 ---
 
 ## Organizational Unit Design
 
-Separate Active Directory resources into dedicated Organizational Units.
+Separate Active Directory resources into dedicated Organizational Units where appropriate.
 
-Recommended structure:
+Recommended logical categories from the documented lab include:
 
-- Users
-- Workstations
-- Servers
-- Service Accounts
-- Domain Controllers
+- Users.
+- Workstations.
+- Servers.
+- Service Accounts.
+- Domain Controllers.
 
-This allows policies to be scoped appropriately.
+This makes policy targeting and delegated administration easier to manage.
 
 ---
 
 ## Group Policy Security
 
-Because GPOs affect many systems simultaneously:
+Because GPOs can affect many systems simultaneously:
 
 - Restrict GPO modification permissions.
 - Test policies before deployment.
-- Backup important GPOs.
-- Review policy inheritance regularly.
+- Back up important GPOs.
+- Review policy inheritance.
+- Use appropriate security filtering.
 
 ---
 
 ## Kerberos Security
 
-Enterprise recommendations include:
+Enterprise security practices include:
 
-- Synchronize system time.
-- Disable unnecessary legacy authentication.
-- Monitor ticket activity.
-- Protect privileged accounts.
+- Synchronizing system time.
+- Disabling unnecessary legacy authentication where feasible.
+- Monitoring authentication activity.
+- Protecting privileged accounts.
 
 ---
 
 ## Protect Privileged Groups
 
-Monitor membership of groups such as:
+Groups requiring particular attention include:
 
-- Domain Admins
-- Enterprise Admins
-- Administrators
-- Backup Operators
+- Domain Admins.
+- Enterprise Admins.
+- Administrators.
+- Backup Operators.
 
-Unexpected changes to privileged groups should always be investigated.
+Unexpected membership changes in privileged groups should be investigated.
 
 ---
 
 ## SYSVOL Security
 
-- Restrict write permissions.
-- Monitor replication health.
-- Audit policy changes.
-- Secure login scripts.
+Security considerations include:
+
+- Restricting write permissions.
+- Monitoring replication health.
+- Auditing policy changes.
+- Securing login scripts.
 
 ---
 
-# 13. Skills Demonstrated
+# Key Findings
+
+<div class="key-finding">
+
+<div class="key-finding-title">Finding 01 — Centralized Identity Management</div>
+
+Active Directory centralizes identity, authentication, computer management, and policy administration across Windows domain environments.
+
+</div>
+
+<div class="key-finding">
+
+<div class="key-finding-title">Finding 02 — Administrative Segmentation</div>
+
+Organizational Units provide logical administrative boundaries that can be used for policy targeting and delegated administration.
+
+</div>
+
+<div class="key-finding">
+
+<div class="key-finding-title">Finding 03 — Delegated Administration</div>
+
+Routine administrative operations such as password management can be delegated without granting unrestricted Domain Administrator privileges.
+
+</div>
+
+<div class="key-finding">
+
+<div class="key-finding-title">Finding 04 — Centralized Policy Management</div>
+
+Group Policy provides a mechanism for deploying consistent Windows configuration and security settings across users and computers.
+
+</div>
+
+<div class="key-finding">
+
+<div class="key-finding-title">Finding 05 — Ticket-Based Authentication</div>
+
+Kerberos provides the preferred authentication mechanism for modern Active Directory environments through ticket-based authentication.
+
+</div>
+
+---
+
+# Attack / Administrative Flow
+
+The documented lab is primarily an **Active Directory administration and Windows security fundamentals exercise**, rather than an exploitation-focused CTF.
+
+The practical flow can therefore be summarized as:
+
+<div class="attack-chain">
+
+<div class="attack-step">Windows Domain</div>
+
+<div class="attack-arrow">→</div>
+
+<div class="attack-step">Active Directory</div>
+
+<div class="attack-arrow">→</div>
+
+<div class="attack-step">ADUC Administration</div>
+
+<div class="attack-arrow">→</div>
+
+<div class="attack-step">User Management</div>
+
+<div class="attack-arrow">→</div>
+
+<div class="attack-step">Computer Management</div>
+
+<div class="attack-arrow">→</div>
+
+<div class="attack-step">Group Policy</div>
+
+<div class="attack-arrow">→</div>
+
+<div class="attack-step">Authentication</div>
+
+<div class="attack-arrow">→</div>
+
+<div class="attack-step">Enterprise AD Architecture</div>
+
+</div>
+
+This reflects the actual learning and administrative progression documented in the source material.
+
+---
+
+# Skills Demonstrated
 
 ## Windows Administration
 
-- Active Directory Users and Computers (ADUC)
-- Organizational Unit Management
-- User Administration
-- Computer Administration
-- Group Management
+- Active Directory Users and Computers (ADUC).
+- Organizational Unit management.
+- User administration.
+- Computer administration.
+- Group management.
+- Windows Domain administration.
 
----
+## Identity & Access Management
 
-## Identity & Access Management (IAM)
-
-- Authentication
-- Authorization
-- Administrative Delegation
-- Least Privilege
-- Security Groups
-
----
+- Authentication.
+- Authorization.
+- Administrative delegation.
+- Principle of Least Privilege.
+- Security groups.
+- User and computer identities.
 
 ## Windows Security
 
-- Kerberos Authentication
-- NetNTLM Authentication
-- Group Policy Objects
-- SYSVOL
-- Windows Domain Architecture
-
----
+- Kerberos authentication.
+- NetNTLM authentication.
+- Group Policy Objects.
+- SYSVOL.
+- Windows Domain architecture.
+- Privileged group protection.
 
 ## PowerShell Administration
 
-- User Account Management
-- Password Reset Operations
-- Active Directory Cmdlets
-- Organizational Unit Creation
-
----
+- User account management.
+- Password reset operations.
+- Active Directory cmdlets.
+- Account enable/disable operations.
+- Organizational Unit creation.
 
 ## Blue Team Fundamentals
 
-- Windows Domain Security
-- Identity Management
-- Authentication Workflow
-- Group Policy Deployment
-- Enterprise Active Directory Administration
+- Windows Domain security.
+- Identity management.
+- Authentication workflows.
+- Group Policy deployment.
+- Enterprise Active Directory administration.
+- Administrative privilege management.
 
 ---
 
-# 14. Key Takeaways
+# Lessons Learned
 
 This lab provided practical exposure to the operational side of Microsoft Active Directory rather than only theoretical concepts.
 
-### Technical Knowledge Gained
+### Technical Knowledge
 
 - Active Directory centralizes identity and access management.
-- Domain Controllers authenticate users and computers.
+- Domain Controllers provide authentication and directory services.
 - Organizational Units organize resources for administration and policy deployment.
 - Security Groups simplify permission management.
-- Group Policy Objects enforce centralized Windows configuration.
-- SYSVOL distributes policies throughout the domain.
+- Group Policy Objects provide centralized Windows configuration.
+- SYSVOL supports distribution of Group Policy-related files and scripts.
 - Kerberos is the preferred authentication protocol in modern Windows domains.
-- Trees, Forests, and Trust Relationships enable enterprise-scale Active Directory deployments.
+- NetNTLM remains relevant for legacy compatibility.
+- Trees, Forests, and Trust Relationships allow Active Directory to scale across larger enterprise environments.
 
-### Administrative Skills Practiced
+### Administrative Skills
 
 - Navigating Active Directory Users and Computers.
+- Reviewing user account properties.
 - Managing user accounts.
-- Resetting passwords securely.
+- Performing password administration.
 - Creating Organizational Units.
 - Organizing workstation computer objects.
 - Understanding Group Policy deployment.
+- Understanding Kerberos and NetNTLM authentication.
+- Using PowerShell for Active Directory administration.
 
 ### Cybersecurity Relevance
 
-The concepts learned in this room are directly applicable to:
+The concepts practiced in this room are directly applicable to:
 
-- Windows System Administration
-- Identity & Access Management (IAM)
-- Security Operations Center (SOC)
-- Blue Team Operations
-- Active Directory Security Assessments
+- Windows System Administration.
+- Identity & Access Management (IAM).
+- Security Operations Center (SOC) work.
+- Blue Team operations.
+- Active Directory security assessments.
+- Enterprise Windows security.
+
+<div class="callout info">
+
+<div class="callout-title">Portfolio Relevance</div>
+
+This exercise demonstrates foundational knowledge of how enterprise Windows environments manage identities, endpoints, authentication, authorization, and centralized security policy.
+
+</div>
 
 ---
 
-# 15. References
+# References
 
-The following official resources were used to reinforce concepts introduced during the lab.
+The original documentation identified the following resources for reinforcing concepts introduced during the lab:
 
 - Microsoft Learn — Active Directory Domain Services Documentation.
 - Microsoft Learn — Active Directory Users and Computers.
@@ -1569,6 +1854,7 @@ The following official resources were used to reinforce concepts introduced duri
 Active-Directory-Basics-TryHackMe/
 │
 ├── README.md
+│
 ├── docs/
 │   ├── index.md
 │   └── assets/
@@ -1598,19 +1884,30 @@ Active-Directory-Basics-TryHackMe/
 
 ---
 
+# Responsible Use
+
+This documentation was created for authorized cybersecurity training and CTF environments.
+
+Techniques, administrative procedures, authentication concepts, and security practices described here should only be applied to systems for which you have explicit authorization to test or administer.
+
+---
+
 # Educational Disclaimer
 
-This repository documents concepts and administrative procedures performed during the **TryHackMe – Active Directory Basics** room.
+This repository documents concepts and administrative procedures performed during the **TryHackMe — Active Directory Basics** room.
 
-**Included**
+### Included
 
 - Windows Active Directory concepts.
 - Administrative workflows.
 - PowerShell examples.
 - Original documentation and screenshots.
 - Educational explanations.
+- Windows authentication concepts.
+- Group Policy and SYSVOL concepts.
+- Enterprise Active Directory architecture.
 
-**Excluded**
+### Excluded
 
 - Challenge flags.
 - Passwords.
@@ -1618,22 +1915,30 @@ This repository documents concepts and administrative procedures performed durin
 - Sensitive outputs.
 - Challenge answers.
 
-The purpose of this repository is to demonstrate practical understanding of Windows Active Directory administration while respecting TryHackMe's learning guidelines.
+Challenge-specific information intentionally redacted in the source documentation remains redacted.
+
+The purpose of this repository is to demonstrate practical understanding of Windows Active Directory administration and security fundamentals while respecting the educational nature of the TryHackMe environment.
 
 ---
 
-## Author
+# Author
 
-**Anurag Ravankar**
+**Anurag Revankar**
 
 Cybersecurity Student • Windows Security • Blue Team Fundamentals • Active Directory Administration
 
 ---
 
-<p align="center">
+<div class="ctf-footer">
 
-**⭐ If you found this documentation useful, consider starring the repository.**
+<strong>CYBERSECURITY CTF PORTFOLIO</strong>
 
-*Built for learning, documentation, and cybersecurity portfolio development.*
+<br>
 
-</p>
+Research • Practice • Detection • Defense
+
+<br><br>
+
+© Anurag R.
+
+</div>
