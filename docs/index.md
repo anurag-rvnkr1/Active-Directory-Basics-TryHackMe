@@ -74,39 +74,81 @@ enterprise Active Directory architecture.
 </div>
 
 ---
-
 ## Navigation
 
 <div class="ctf-toc">
 
 <div class="ctf-toc-title">Documentation Map</div>
 
-- [Mission](#mission)
-- [Lab Environment](#lab-environment)
-- [Learning Objectives](#learning-objectives)
-- [Active Directory Fundamentals](#active-directory-fundamentals)
-- [Windows Domains](#windows-domains)
-- [Domain Controllers](#domain-controllers)
-- [Active Directory Objects](#active-directory-objects)
-- [Organizational Units](#organizational-units)
-- [Task 2 — Windows Domains](#task-2--windows-domains)
-- [Task 3 — Active Directory Objects](#task-3--active-directory-objects)
-- [Task 4 — Managing Users](#task-4--managing-users)
-- [Task 5 — Managing Computers](#task-5--managing-computers)
-- [Task 6 — Group Policy Objects & SYSVOL](#task-6--group-policy-objects--sysvol)
-- [Task 7 — Authentication](#task-7--authentication)
-- [Task 8 — Trees, Forests & Trust Relationships](#task-8--trees-forests--trust-relationships)
-- [PowerShell Administration](#powershell-administration)
-- [Security Best Practices](#security-best-practices)
-- [Skills Demonstrated](#skills-demonstrated)
-- [Key Findings](#key-findings)
-- [Lessons Learned](#lessons-learned)
-- [References](#references)
-- [Repository Structure](#repository-structure)
-- [Responsible Use](#responsible-use)
+<div class="ctf-toc-section">
+
+<strong>Core Concepts</strong>
+
+<ul>
+<li><a href="#mission">Mission</a></li>
+<li><a href="#lab-environment">Lab Environment</a></li>
+<li><a href="#learning-objectives">Learning Objectives</a></li>
+<li><a href="#active-directory-fundamentals">Active Directory Fundamentals</a></li>
+<li><a href="#windows-domains">Windows Domains</a></li>
+<li><a href="#domain-controllers">Domain Controllers</a></li>
+<li><a href="#active-directory-objects">Active Directory Objects</a></li>
+<li><a href="#organizational-units">Organizational Units</a></li>
+</ul>
 
 </div>
 
+<div class="ctf-toc-section">
+
+<strong>Practical Tasks</strong>
+
+<ul>
+<li><a href="#task-2--windows-domains">Task 2 — Windows Domains</a></li>
+<li><a href="#task-3--active-directory-objects">Task 3 — Active Directory Objects</a></li>
+<li><a href="#task-4--managing-users">Task 4 — Managing Users</a></li>
+<li><a href="#task-5--managing-computers">Task 5 — Managing Computers</a></li>
+<li><a href="#task-6--group-policy-objects--sysvol">Task 6 — Group Policy Objects &amp; SYSVOL</a></li>
+<li><a href="#task-7--authentication">Task 7 — Authentication</a></li>
+<li><a href="#task-8--trees-forests--trust-relationships">Task 8 — Trees, Forests &amp; Trust Relationships</a></li>
+</ul>
+
+</div>
+
+<div class="ctf-toc-section">
+
+<strong>Administration &amp; Security</strong>
+
+<ul>
+<li><a href="#powershell-administration">PowerShell Administration</a></li>
+<li><a href="#security-best-practices">Security Best Practices</a></li>
+</ul>
+
+</div>
+
+<div class="ctf-toc-section">
+
+<strong>Assessment &amp; Findings</strong>
+
+<ul>
+<li><a href="#skills-demonstrated">Skills Demonstrated</a></li>
+<li><a href="#key-findings">Key Findings</a></li>
+<li><a href="#lessons-learned">Lessons Learned</a></li>
+</ul>
+
+</div>
+
+<div class="ctf-toc-section">
+
+<strong>Supporting Information</strong>
+
+<ul>
+<li><a href="#references">References</a></li>
+<li><a href="#repository-structure">Repository Structure</a></li>
+<li><a href="#responsible-use">Responsible Use</a></li>
+</ul>
+
+</div>
+
+</div>
 ---
 
 ## Mission
