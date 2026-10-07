@@ -200,7 +200,7 @@
         </span>
 
         <span class="portfolio-brand-text">
-          CYBERSECURITY
+          Active Directory Basics
         </span>
 
       </a>
@@ -261,37 +261,6 @@
     </div>
 
   </header>
-
-
-  <!-- =========================================================
-       TERMINAL BANNER
-       ========================================================= -->
-
-  <section
-    class="portfolio-terminal"
-    aria-label="Research environment"
-  >
-
-    <div class="portfolio-terminal-inner">
-
-      <span class="terminal-prompt">
-        root@security-lab:~$
-      </span>
-
-      <span class="terminal-command">
-        ./initialize_ctf_research
-      </span>
-
-      <span
-        class="terminal-cursor"
-        aria-hidden="true"
-      >
-        _
-      </span>
-
-    </div>
-
-  </section>
 
 
   <!-- =========================================================
@@ -463,7 +432,7 @@
         </span>
 
         <span>
-          CYBERSECURITY CTF PORTFOLIO
+          CTF PORTFOLIO
         </span>
 
       </div>
@@ -483,24 +452,11 @@
       </div>
 
 
-      <div class="footer-status">
-
-        <span
-          class="status-indicator"
-          aria-hidden="true"
-        ></span>
-
-        <span>
-          SYSTEM OPERATIONAL
-        </span>
-
-      </div>
-
 
       <div class="footer-copyright">
 
         © {{ 'now' | date: "%Y" }}
-        {{ site.author | default: "Security Researcher" }}
+        {{ site.author | default: "Anurag Revankar" }}
 
       </div>
 
